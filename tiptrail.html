@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Tiptrail</title>     
+        <link rel="stylesheet" href="style.css"> 
+        <link rel="stylesheet" href="password_strength.css"> 
+        <script  src="jquery3.4.0.js" > </script>
+        <script  src="password_strength_lightweight.js" > </script>
+    </head>
+ 
+<body>
+
+    <div class="container">
+        <h1>jQuery Password-Strength Plugin Demos</h1>
+
+
+        <div class="effects">
+            <h2>Default Style</h2>
+            <div id="myPassword"> </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function($) {
+ $('#myPassword').strength_meter();
+
+ $('#mySecondPassword').strength_meter({
+     inputClass: 'c_strength_input',
+     strengthMeterClass: 'c_strength_meter',
+     toggleButtonClass: 'c_button_strength'
+ });
+
+ $("#myThirdPassword").strength_meter({
+     strengthMeterClass: 't_strength_meter'
+ });
+});
+</script>
+
+</html>
